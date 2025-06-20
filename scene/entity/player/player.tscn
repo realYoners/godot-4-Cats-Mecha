@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://ccgbyltqb4kko"]
+
+[ext_resource type="Script" uid="uid://cg6d5do0t46e4" path="res://scene/entity/player/main_player.gd" id="1_pv27p"]
+[ext_resource type="Script" uid="uid://0ugxct3e8a20" path="res://scene/entity/player/parts_manager.gd" id="2_m1lad"]
+[ext_resource type="Script" uid="uid://bm5emkgjx2xax" path="res://scene/entity/player/input_manager.gd" id="3_n0siw"]
+[ext_resource type="Script" uid="uid://btm0fmdnq4rj0" path="res://scene/entity/player/weapons_manager.gd" id="4_uy4ee"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m1lad"]
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_pv27p")
+
+[node name="Player_Sprite" type="Sprite2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_m1lad")
+
+[node name="Parts_Manager" type="Node2D" parent="."]
+script = ExtResource("2_m1lad")
+
+[node name="Input_Manager" type="Node" parent="."]
+script = ExtResource("3_n0siw")
+
+[node name="Move_Cooldown_Timer" type="Timer" parent="Input_Manager"]
+one_shot = true
+
+[node name="Weapons_Manager" type="Node" parent="."]
+script = ExtResource("4_uy4ee")
+
+[node name="Reload_L_Delay_Timer" type="Timer" parent="Weapons_Manager"]
+
+[node name="Reload_R_Delay_Timer" type="Timer" parent="Weapons_Manager"]

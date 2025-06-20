@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://d23j3l6nb4reu"]
+
+[ext_resource type="Script" uid="uid://cm3xw87uxug2a" path="res://scene/level/test_level/lv_setup.gd" id="1_twal5"]
+[ext_resource type="Texture2D" uid="uid://bnep4r6w0ylng" path="res://scene/level/test_level/2d_assets/ocean.png" id="2_tux8e"]
+
+[node name="Test_Level" type="Node2D"]
+script = ExtResource("1_twal5")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+visible = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+scale = Vector2(1.25, 0.998437)
+texture = ExtResource("2_tux8e")
+centered = false
+
+[node name="Move_Space_Container" type="Container" parent="."]
+offset_right = 280.0
+offset_bottom = 640.0
+
+[node name="Entity_Spawn_Manager" type="Node" parent="."]

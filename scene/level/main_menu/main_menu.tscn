@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=3 uid="uid://by0prr6cqgs7q"]
+
+[ext_resource type="Script" uid="uid://d2gjxebpg3101" path="res://scene/level/main_menu/mm_layout.gd" id="1_0jvgx"]
+
+[node name="Main_Menu" type="Node2D"]
+
+[node name="mm_container" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 190.0
+offset_right = 250.0
+offset_bottom = 640.0
+script = ExtResource("1_0jvgx")
+
+[node name="btn_new_game" type="Button" parent="mm_container"]
+custom_minimum_size = Vector2(125, 45)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -62.5
+offset_right = 62.5
+offset_bottom = 45.0
+grow_horizontal = 2
+text = "New Game"
+
+[node name="btn_load_game" type="Button" parent="mm_container"]
+custom_minimum_size = Vector2(125, 45)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -62.5
+offset_right = 62.5
+offset_bottom = 45.0
+grow_horizontal = 2
+text = "Load Game"
+
+[node name="btn_options" type="Button" parent="mm_container"]
+custom_minimum_size = Vector2(125, 45)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -62.5
+offset_right = 62.5
+offset_bottom = 45.0
+grow_horizontal = 2
+text = "Options"
+
+[node name="btn_quit" type="Button" parent="mm_container"]
+custom_minimum_size = Vector2(125, 45)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -62.5
+offset_right = 62.5
+offset_bottom = 45.0
+grow_horizontal = 2
+text = "Quit"
